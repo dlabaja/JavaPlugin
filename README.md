@@ -1,2 +1,2 @@
 # JavaPlugin
-Java plugin co jsem udělal s funkční minihrou BoomPVP
+Java plugin s funkční minihrou BoomPVP
