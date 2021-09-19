@@ -15,12 +15,12 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
 public class MongoData {
     //codec podle kterého se db řídí
-    static CodecRegistry pojoCodecRegistry = fromProviders(PojoCodecProvider.builder().automatic(true).build());
-    static CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), pojoCodecRegistry);
+    static CodecRegistry codecRegistry = fromRegistries(MongoClientSettings.getDefaultCodecRegistry(),
+            fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 
     //vytvoření připojení
-    private static MongoClientSettings clientSettings = MongoClientSettings.builder()
-            .applyConnectionString(new ConnectionString("URI"))
+    private static final MongoClientSettings clientSettings = MongoClientSettings.builder()
+            .applyConnectionString(new ConnectionString(""))
             .codecRegistry(codecRegistry)
             .build();
 

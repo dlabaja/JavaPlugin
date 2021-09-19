@@ -6,25 +6,21 @@ import org.bson.types.ObjectId;
 import java.util.Objects;
 
 //třida na práci s databází MongoDB
-public class MongoBoomPVP{
+public class MongoBoomPVP {
     private ObjectId _id;
-    @BsonProperty(value = "deaths")
-    private int deaths;
-
-    @BsonProperty(value = "kills")
-    private int kills;
-
     @BsonProperty(value = "name")
     private String name;
-    @BsonProperty(value = "uuid")
-    private String uuid;
-
+    @BsonProperty(value = "kills")
+    private int kills;
+    @BsonProperty(value = "deaths")
+    private int deaths;
     @BsonProperty(value = "killstreak")
     private int killstreak;
 
     public int getKills() {
         return kills;
     }
+
     public MongoBoomPVP setKills(int kills) {
         this.kills = kills;
         return this;
@@ -33,6 +29,7 @@ public class MongoBoomPVP{
     public int getDeaths() {
         return deaths;
     }
+
     public MongoBoomPVP setDeaths(int deaths) {
         this.deaths = deaths;
         return this;
@@ -41,6 +38,7 @@ public class MongoBoomPVP{
     public int getKillstreak() {
         return killstreak;
     }
+
     public MongoBoomPVP setKillstreak(int killstreak) {
         this.killstreak = killstreak;
         return this;
@@ -50,16 +48,11 @@ public class MongoBoomPVP{
         this.name = name;
         return this;
     }
-    public MongoBoomPVP setUUID(String uuid) {
-        this.uuid = uuid;
-        return this;
-    }
 
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("MongoBoomPVP{");
         sb.append("name=").append(name);
-        sb.append(", uuid=").append(uuid);
         sb.append(", kills=").append(kills);
         sb.append(", deaths=").append(deaths);
         sb.append(", killstreak=").append(killstreak);
@@ -74,14 +67,14 @@ public class MongoBoomPVP{
         if (o == null || getClass() != o.getClass())
             return false;
         MongoBoomPVP MongoBoomPVP = (MongoBoomPVP) o;
-        return Objects.equals(name, MongoBoomPVP.name) && Objects.equals(uuid, MongoBoomPVP.uuid) && Objects.equals(kills,
+        return Objects.equals(name, MongoBoomPVP.name) && Objects.equals(kills,
                 MongoBoomPVP.kills) && Objects
                 .equals(deaths, MongoBoomPVP.deaths) && Objects.equals(killstreak, MongoBoomPVP.killstreak);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, uuid, kills, deaths, killstreak);
+        return Objects.hash(name, kills, deaths, killstreak);
     }
 }
 

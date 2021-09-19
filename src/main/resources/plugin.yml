@@ -1,12 +1,9 @@
-name: dblPlugin
+name: dblBoomPVP
 version: ${project.version}
 main: me.dlabaja.dbl.Main
 api-version: 1.16
 
 commands:
-    lobby:
-      description: Teleportuje na lobby
-      usage: /lobby
     boomkit:
       description: boomkit
       usage: /boomkit
