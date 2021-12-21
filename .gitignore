@@ -76,4 +76,4 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-src/main/java/me/dlabaja/dbl/MongoRoot/Secrets.java
+**/MongoRoot/Secrets.java
