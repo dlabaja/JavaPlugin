@@ -20,7 +20,7 @@ public class MongoData {
 
     //vytvoření připojení
     private static final MongoClientSettings clientSettings = MongoClientSettings.builder()
-            .applyConnectionString(new ConnectionString(new Secrets().connectionString))
+            .applyConnectionString(new ConnectionString(""))
             .codecRegistry(codecRegistry)
             .build();
 
