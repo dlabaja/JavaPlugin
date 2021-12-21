@@ -1,5 +1,5 @@
 package me.dlabaja.dbl.MongoRoot;
 
 public class Secrets {
-    public String connectionString = "test2";
+    public String connectionString = "test3";
 }
